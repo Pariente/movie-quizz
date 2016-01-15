@@ -1,6 +1,7 @@
 var GameModel = Backbone.Model.extend({
   defaults: {
     score: '',
-    name: ''
+    name: '',
+    current: 0
   }
 });

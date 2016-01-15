@@ -7,6 +7,7 @@ var QuestionView = Backbone.View.extend ({
   },
 
   initialize: function() {
+    $('#footer').empty();
     var that = this;
     this.myQuestionCollection = new QuestionCollection(); // we bind the collection to the view by instanciating it.
     this.myQuestionCollection.fetch({
@@ -20,11 +21,7 @@ var QuestionView = Backbone.View.extend ({
     });
   },
 
-  getTemplate: function(question) {
-    console.log(question);
-    var questionTemplate = '<p>Yolo '+ question.movie.title +'</p>';
-    return $(questionTemplate);
-  },
+  templateHandlebars: Handlebars.compile($('#template-handlebars').html()),
 
   nextQuestion: function(answer, question) {
     var goodAnswer = question.actor.isPresent;
@@ -39,11 +36,15 @@ var QuestionView = Backbone.View.extend ({
   render: function() {
     var $renderTarget = this.$('#content');
     $renderTarget.empty();
-    var totalQuestions = this.myQuestionCollection.length;
-    var currentQuestion = 0;
+    // Questions
     var questions = this.myQuestionCollection.toJSON();
-    console.log(questions);
-    var questionTemplate = this.getTemplate(questions[currentQuestion]);
-    $renderTarget.append(questionTemplate);
+    var totalQuestions = this.myQuestionCollection.length;
+    // Game
+    var myGame = new GameModel();
+    var currentQuestion = myGame.get('current');
+
+    $renderTarget.html(
+      this.templateHandlebars(questions[currentQuestion])
+    );
   }
 });
