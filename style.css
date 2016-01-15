@@ -48,9 +48,12 @@ h1 {
   margin: auto
 }
 
-a {
-  font-size: 20px;
-  color: #2D5787;
+a,
+a:active,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: #9b59b6;
 }
 
 p {
