@@ -9,21 +9,43 @@ html, body {
 
 body {
   font-size: 1em;
-  color: #303030;
+  color: #FFFFFF;
   font-family: Avenir, Helvetica, sans-serif;
   font-weight: 300;
   margin-top: 1em;
+  background: url('assets/img/cinema-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 h1, h2, h3, h4 {
-  font-size: 2em;
   letter-spacing: 2.57px;
-  margin: 0em 0.5em 0.5em;
+  margin: 1em 0.5em 0.5em;
+  text-shadow: 2px 2px #000000;
 }
 
-#id {
+h1 {
+  color: #DE3343;
+  text-shadow: 1px 1px #FFFFFF;
+}
+
+#app {
   margin: auto;
-  width: 70%
+  width: 70%;
+}
+
+#content {
+  min-height: 300px;
+}
+
+#footer {
+  max-width: 400px;
+  margin: auto
+}
+
+.subtitle {
+  width: 60%;
+  margin: auto
 }
 
 a {
@@ -45,28 +67,33 @@ label {
   letter-spacing: 2.06px;
 }
 
-input[type="text"],
-input[type="submit"] {
-  width: 100%;
-  border: 1px solid #AFAFAF;
+button {
+  color: #FFFFFF;
+  font-family: Avenir, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  padding: 0.5em 1em;
+  font-size: 18px;
+  border: 0px;
   border-radius: 5px;
-  font-size: 1.5em;
-  color: #616161;
-  letter-spacing: 2.06px;
-  padding: 0.6em;
-  box-sizing: border-box;
-  -webkit-appearance: none;
   margin-bottom: 1em;
+  cursor: pointer;
 }
 
-input[type="submit"] {
-  cursor: pointer;
-  background: #2B9C44;
-  box-sizing: border-box;
-  font-weight: bold;
-  color: #FFFFFF;
-  border: 0px;
-  border-bottom: 0.2em solid #6FCA83;
+.btn-red {
+  background-color: #E74C3C;
+  border-bottom: 2px solid #FFFFFF;
+  box-shadow: 2px 2px #000;
+}
+
+.btn-orange {
+  background-color: #F39C12;
+  border-bottom: 2px solid #FFFFFF;
+  box-shadow: 2px 2px #000;
+}
+
+.btn-green {
+  background-color: #2DAF4A;
+  border: 2px solid #2DAF4A;
 }
 
 select {
