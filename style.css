@@ -13,9 +13,11 @@ body {
   font-family: Avenir, Helvetica, sans-serif;
   font-weight: 300;
   margin-top: 1em;
-  background: url('assets/img/cinema-bg.jpg') no-repeat;
+  background: url('assets/img/cinema-bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center center;
 }
 
 h1, h2, h3, h4 {
@@ -25,8 +27,8 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  color: #FFFFFF;
-  text-shadow: 1px 1px #000000;
+  color: #DE3343;
+  text-shadow: 1px 1px #FFFFFF;
 }
 
 #app {
@@ -34,8 +36,13 @@ h1 {
   width: 70%;
 }
 
-.title {
-  margin-bottom: 2em
+#content {
+  min-height: 300px;
+}
+
+#footer {
+  max-width: 400px;
+  margin: auto
 }
 
 .subtitle {
@@ -48,17 +55,11 @@ a:active,
 a:hover,
 a:visited {
   text-decoration: none;
-  color: #9B59B6;
-  text-shadow: 1px 1px #FFFFFF
+  color: #9b59b6;
 }
 
 p {
   margin: 0
-}
-
-.red {
-  color: #DE3343;
-  text-shadow: 1px 1px #FFFFFF;
 }
 
 form {
@@ -66,10 +67,9 @@ form {
   width: 80%;
 }
 
-.buttons {
-  max-width: 400px;
-  margin: auto;
-  margin-top: 2em
+label {
+  font-size: 1.5em;
+  letter-spacing: 2.06px;
 }
 
 button {
@@ -80,21 +80,25 @@ button {
   font-size: 18px;
   border: 0px;
   border-radius: 5px;
-  margin: 0em 1em 1em;
+  margin-bottom: 1em;
   cursor: pointer;
-  border-bottom: 2px solid #FFFFFF;
 }
 
 .btn-red {
   background-color: #E74C3C;
+  border-bottom: 2px solid #FFFFFF;
+  box-shadow: 2px 2px #000;
 }
 
 .btn-orange {
   background-color: #F39C12;
+  border-bottom: 2px solid #FFFFFF;
+  box-shadow: 2px 2px #000;
 }
 
 .btn-green {
   background-color: #2DAF4A;
+  border: 2px solid #2DAF4A;
 }
 
 select {
@@ -118,10 +122,8 @@ li {
     background-repeat: no-repeat;
     border-radius: 5px;
     overflow: hidden;
-    height: 200px;
-    width: 160px;
-    margin: 0em 1em;
-    border: 2px solid #FFFFFF
+    height: 330px;
+    width: 217px
 }
 
 .moviebox-title {
@@ -135,6 +137,27 @@ li {
     background: rgba(60,60,60,0.8);
     border-radius: 0px 5px 5px 0px;
     width: 80%
+}
+.ribbon-red,
+.ribbon-green {
+    width: 150px;
+    position: static;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #fff;
+    background: #C61A39;
+    float: right;
+    margin: 20px -41px 0px 0px;
+    font-weight: 700;
+    transform: rotate(45deg);
+    -webkit-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.5)
+}
+
+.ribbon-green {
+  background-color: #2B9C44;
 }
 
 /**** DRY CLASSES ****/
@@ -161,8 +184,4 @@ li {
 
 .align-top {
   vertical-align: top;
-}
-
-.clear {
-  clear: both
 }
