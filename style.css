@@ -27,7 +27,6 @@ h1, h2, h3, h4 {
 h1 {
   color: #FFFFFF;
   text-shadow: 1px 1px #000000;
-  margin-bottom: 2em;
 }
 
 #app {
@@ -35,15 +34,10 @@ h1 {
   width: 70%;
 }
 
-.buttons {
-  max-width: 400px;
-  margin: auto;
-  margin-top: 2em
-}
-
 .subtitle {
   width: 60%;
-  margin: auto
+  margin: auto;
+  margin-top: 3em
 }
 
 a,
@@ -69,9 +63,22 @@ form {
   width: 80%;
 }
 
-label {
-  font-size: 1.5em;
-  letter-spacing: 2.06px;
+input[type="text"] {
+  color: #222222;
+  font-family: Avenir, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: 3px solid #F39C12;
+  margin: 0em 0em 1em;
+}
+
+.buttons {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 2em
 }
 
 button {
@@ -80,22 +87,26 @@ button {
   letter-spacing: 2px;
   padding: 0.5em 1em;
   font-size: 18px;
-  border: 0px;
   border-radius: 5px;
   margin: 0em 1em 1em;
   cursor: pointer;
-  border-bottom: 2px solid #FFFFFF;
 }
 
 .btn-red {
+  border: 3px solid #E74C3C;
+  border-bottom-color: #FFFFFF;
   background-color: #E74C3C;
 }
 
 .btn-orange {
+  border: 3px solid #F39C12;
+  border-bottom-color: #FFFFFF;
   background-color: #F39C12;
 }
 
 .btn-green {
+  border: 3px solid #2DAF4A;
+  border-bottom-color: #FFFFFF;
   background-color: #2DAF4A;
 }
 
