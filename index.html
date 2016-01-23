@@ -7,15 +7,47 @@
 </head>
 <body>
   <div id="app">
-    <h1 class="center">Inornot, just another movie quizz.</h1>
+    <h1 class="center title"><a href="">Inornot</a>, just another movie quizz.</h1>
     <div id="content">
       <h3 class="center subtitle">Is that guy part of that movie cast? Yes? No? Maybe? I don't know... Can you repeat the question? YOU'RE NOT THE BOSS OF ME NOW!<h3>
     </div>
-    <div id="footer">
-      <button class="inline-block left btn-red">START</button>
-      <button class="inline-block right btn-orange">SCORES</button>
+    <div id="footer" class="buttons center">
+      <a href="#play"><button class="inline-block btn-red">START</button></a>
+      <a href="#scores"><button class="inline-block btn-orange">SCORES</button></a>
     </div>
   </div>
+
+  <!-- Template for each question -->
+  <script id="template-question" type="text/x-handlebars-template">
+    <h3 class="center">
+      Is <span class="red">{{this.actor.name}}</span> in <span class="red">{{this.movie.title}}</span>?
+    </h3>
+    <div class="center">
+      <div class="moviebox-bg inline-block" style="background: url('{{this.actor.image}}')">
+      </div>
+      <div class="moviebox-bg inline-block" style="background: url('{{this.movie.poster}}')">
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="inline-block left btn-green next-question" value="true">YUP</button>
+      <button class="inline-block right btn-red next-question" value="false">NOPE</button>
+    </div>
+    <div class="score clear">
+      <h3 class="center">Score: <span class="current-score"></span></h3>
+    </div>
+  </script>
+
+  <!-- Template for GameOver -->
+  <script id="template-gameover" type="text/x-handlebars-template">
+    <h2 class="center red">Game Over, lol.</h2>
+    <h3 class="center">Your score was</h3>
+    <h1 class="center red">{{this.score}}</h1>
+    <h3 class="center">Type your name below<br />if you're not too ashamed of yourself</h3>
+    <form action="#" class="center">
+      <input id="player-name" type="text" placeholder="I suck at this game."/>
+      <button class="inline-block btn-orange submit-score">SUBMIT</button>
+    </form>
+  </script>
 
   <!-- jQuery and Backbone -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -31,6 +63,7 @@
   <script src="script/collections/question-collection.js"></script>
   <script src="script/collections/game-collection.js"></script>
   <script src="script/views/question-view.js"></script>
+  <script src="script/views/gameover-view.js"></script>
   <script src="script/app.js"></script>
 
 </body>

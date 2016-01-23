@@ -4,30 +4,29 @@ var AppRouter = Backbone.Router.extend({
     // Default route
     '': 'defaultRoute',
     // Game start route
-    'start': 'gameStartRoute',
-    // Gameover route
+    'play': 'gameStartRoute',
+    // Game over route
     'gameover': 'gameOverRoute',
     // Highscores route
-    'highscores': 'highscoresRoute'
+    'scores': 'scoresRoute'
   },
 
   defaultRoute: function () {
-    console.log('This is the default route.');
   },
 
   gameStartRoute: function() {
-    console.log('This is the gameStart route.');
+    var MyQuestionView = new QuestionView();
   },
 
   gameOverRoute: function() {
-    console.log('This is the gameOver route.');
+    var MyGameOverView = new GameOverView();
   },
 
-  highscoresRoute: function() {
-    console.log('This is the highscores route.');
+  scoresRoute: function() {
+    console.log('This is the scores route.');
   },
 });
 
-var MyRouter = new AppRouter;
+var MyRouter = new AppRouter();
 
 Backbone.history.start();
