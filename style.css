@@ -13,9 +13,11 @@ body {
   font-family: Avenir, Helvetica, sans-serif;
   font-weight: 300;
   margin-top: 1em;
-  background: url('assets/img/cinema-bg.jpg') no-repeat;
+  background: url('assets/img/cinema-bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center center;
 }
 
 h1, h2, h3, h4 {
