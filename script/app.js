@@ -23,7 +23,7 @@ var AppRouter = Backbone.Router.extend({
   },
 
   scoresRoute: function() {
-    console.log('This is the scores route.');
+    var MyScoresView = new ScoresView();
   },
 });
 
