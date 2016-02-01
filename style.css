@@ -47,7 +47,7 @@ a:active,
 a:hover,
 a:visited {
   text-decoration: none;
-  color: #9B59B6;
+  color: #DE3343;
   text-shadow: 1px 1px #FFFFFF
 }
 
@@ -57,6 +57,11 @@ p {
 
 .red {
   color: #DE3343;
+  text-shadow: 1px 1px #FFFFFF;
+}
+
+.orange {
+  color: #F39C12;
   text-shadow: 1px 1px #FFFFFF;
 }
 
@@ -118,13 +123,16 @@ select {
 
 ul {
   list-style: none;
-  margin-left: 5em
+  margin: auto;
+  max-width: 400px;
 }
 
 li {
-  display: inline-block;
-  border-radius: 5px;
-  margin: 1em 1em;
+  font-size: 1.3em;
+  font-weight: 700;
+  text-shadow: 2px 2px #000000;
+  margin: 1em 70px;
+  text-transform: uppercase
 }
 
 .moviebox-bg {
@@ -180,4 +188,8 @@ li {
 
 .clear {
   clear: both
+}
+
+.bigger-text {
+  font-size: 1.3em
 }

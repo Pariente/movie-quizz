@@ -42,11 +42,24 @@
     <h2 class="center red">Game Over, lol.</h2>
     <h3 class="center">Your score was</h3>
     <h1 class="center red">{{this.score}}</h1>
-    <h3 class="center">Type your name below<br />if you're not too ashamed of yourself</h3>
+    <h3 class="center">Type your name below<br />if you are not too ashamed of yourself</h3>
     <form action="#" class="center">
       <input id="player-name" type="text" placeholder="I suck at this game."/>
       <button class="inline-block btn-orange submit-score">SUBMIT</button>
     </form>
+  </script>
+
+  <!-- Template for Scores -->
+  <script id="template-scores" type="text/x-handlebars-template">
+    <h2 class="center orange">Highest Scores</h2>
+    <ul>
+      {{#each this}}
+        <li><span class="red bigger-text">{{score}}</span> - {{name}}</li>
+      {{/each}}
+    </ul>
+    <div id="footer" class="buttons center">
+      <a href="#play"><button class="inline-block btn-red">START A NEW GAME</button></a>
+    </div>
   </script>
 
   <!-- jQuery and Backbone -->
@@ -64,6 +77,7 @@
   <script src="script/collections/game-collection.js"></script>
   <script src="script/views/question-view.js"></script>
   <script src="script/views/gameover-view.js"></script>
+  <script src="script/views/scores-view.js"></script>
   <script src="script/app.js"></script>
 
 </body>
